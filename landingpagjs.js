@@ -34,3 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
         courseList.appendChild(courseDiv);
     });
 });
+    const courseList = document.getElementById("course-list");
+
+    courses.forEach((course) => {
+        const courseDiv = document.createElement("div");
+        courseDiv.classList.add("course");
+        const courseLink = document.createElement("a");
+        courseLink.href = course.link;
+        courseLink.textContent = course.name;
+        courseDiv.appendChild(courseLink);
+        courseList.appendChild(courseDiv);
+    });
+});
